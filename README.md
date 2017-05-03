@@ -12,3 +12,8 @@ npm install --save dashjs
       ],
 ```
 
+## Documentation
+
+* EME (Encrypted Media Extensions)
+
+https://www.w3.org/TR/encrypted-media/

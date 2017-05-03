@@ -22,25 +22,19 @@ export class PlayerComponent implements OnInit {
     this.player.getDebug().setLogToBrowserConsole(true);
     console.log(' Init! ');
 
-    // this.player.initialize();
-    // this.player.attachView(this.myVideo.nativeElement);
-    this.player.initialize(this.myVideo.nativeElement, this.videoSource, true);
-    // this.player.attachSource(this.url);
+    this.player.initialize();
+    this.player.attachView(this.myVideo.nativeElement);
+    this.player.attachSource(this.videoSource);
+    this.player.setAutoPlay(false);
 
-    // this.player.attachVideoContainer(this.myVideo);
 
-    // this.player.initialize(this.myVideo, this.url, true);
-    // this.player.play();
   }
 
   toggleVideo(event: any) {
 
-    console.log(' hit! ');
-    // this.player.initialize(this.myVideo.nativeElement, this.videoSource, true);
-    // this.player.attachView(this.myVideo.nativeElement);
-    // this.player.attachVideoContainer(this.myVideo);
-    // this.myVideo.nativeElement.stop();
-    this.player.play();
+    console.log(' ready? ' + this.player.isReady());
+    console.log(' hit! ' + this.player.duration());
+
   }
 
 }

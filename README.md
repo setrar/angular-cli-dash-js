@@ -2,7 +2,7 @@
 
 > The goal of this project is to create a simple Angular2 Player using dash-js library
 
-# Frontend using @angular-cli
+## Frontend using @angular-cli
 
 * Create the frontend project
 ```

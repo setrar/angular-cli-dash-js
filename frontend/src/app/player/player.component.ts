@@ -10,7 +10,8 @@ import {MediaPlayerClass} from 'dashjs';
 })
 export class PlayerComponent implements OnInit {
 
-  videoSource = 'http://media.crave.fm:1935/vod/mp4:WhatIsThisThingCalledLove.mp4/manifest.mpd';
+  // videoSource = 'http://media.crave.fm:1935/vod/mp4:WhatIsThisThingCalledLove.mp4/manifest.mpd';
+  videoSource = 'http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd';
 
   @ViewChild('videoPlayer') myVideo: any;
 

@@ -11,7 +11,9 @@ import {MediaPlayerClass} from 'dashjs';
 export class PlayerComponent implements OnInit {
 
   // videoSource = 'http://media.crave.fm:1935/vod/mp4:WhatIsThisThingCalledLove.mp4/manifest.mpd';
-  videoSource = 'http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd';
+  // videoSource = 'http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd';
+
+  videoSource = '/stream/jazz.mpd';
 
   @ViewChild('videoPlayer') myVideo: any;
 
@@ -27,7 +29,6 @@ export class PlayerComponent implements OnInit {
     this.player.attachView(this.myVideo.nativeElement);
     this.player.attachSource(this.videoSource);
     this.player.setAutoPlay(false);
-
 
   }
 

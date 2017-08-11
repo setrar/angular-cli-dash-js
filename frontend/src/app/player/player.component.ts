@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 
-import * as dashjs from 'dashjs';
-import {MediaPlayerClass} from 'dashjs';
+import {MediaPlayerClass, MediaPlayer} from 'dashjs';
 
 @Component({
   selector: 'app-player',
@@ -10,25 +9,23 @@ import {MediaPlayerClass} from 'dashjs';
 })
 export class PlayerComponent implements OnInit {
 
-  // videoSource = 'http://media.crave.fm:1935/vod/mp4:WhatIsThisThingCalledLove.mp4/manifest.mpd';
+  // enabled CORS sources
   // videoSource = 'http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd';
+  // videoSource = 'http://localhost:8000/stream/jazz.mpd';
 
-  videoSource = '/stream/jazz.mpd';
+  videoSource = '/stream/jazz/.mpd';
 
   @ViewChild('videoPlayer') myVideo: any;
 
   player: MediaPlayerClass;
 
   ngOnInit() {
-    this.player = dashjs.MediaPlayer().create();
+    this.player = MediaPlayer().create();
 
     this.player.getDebug().setLogToBrowserConsole(true);
     console.log(' Init! ');
 
-    this.player.initialize();
-    this.player.attachView(this.myVideo.nativeElement);
-    this.player.attachSource(this.videoSource);
-    this.player.setAutoPlay(false);
+    this.player.initialize(this.myVideo.nativeElement, this.videoSource, false);
 
   }
 

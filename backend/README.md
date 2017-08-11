@@ -96,3 +96,17 @@ Player.html
 </body>
 </html>
 ```
+
+## AWS CLI
+
+copying a folder
+
+```
+$ aws s3 cp --recursive stream s3://theindie-stream-dev/stream
+```
+
+deleting a folder
+
+```
+$ aws s3 rm --recursive s3://theindie-stream-dev/strea
+```

@@ -110,3 +110,17 @@ deleting a folder
 ```
 $ aws s3 rm --recursive s3://theindie-stream-dev/stream
 ```
+
+
+# Install
+
+https://medium.com/coconut-stories/using-ffmpeg-with-docker-94523547f35c
+
+```
+$ alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
+```
+
+```
+$ ffmpeg 
+```
+#

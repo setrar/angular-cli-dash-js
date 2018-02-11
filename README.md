@@ -26,3 +26,7 @@ $ npm install --save dashjs
 * EME (Encrypted Media Extensions)
 
 https://www.w3.org/TR/encrypted-media/
+
+* MES (Media Source Extension)
+
+https://www.w3.org/TR/media-source/

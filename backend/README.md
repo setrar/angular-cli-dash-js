@@ -124,3 +124,7 @@ $ alias ffmpeg='docker run -v=`pwd`:/tmp/ffmpeg opencoconut/ffmpeg'
 $ ffmpeg 
 ```
 #
+
+@ MP4Box -dash create HLS m3u8 for fragmented MP4 
+
+https://github.com/gpac/gpac/issues/772

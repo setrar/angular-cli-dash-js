@@ -17,4 +17,4 @@ for SONG in "${SONGS[@]}"; do
    MP4Box -dash 4000 -frag 4000 -rap -segment-name segment_ $OUTPUT_FOLDER/${SONG}.mp4#audio -out $STREAM_FOLDER/${SONG}/.mpd
 done
 
-rm -rf $OUTPUT_FOLDER
+#rm -rf $OUTPUT_FOLDER

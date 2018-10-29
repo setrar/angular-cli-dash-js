@@ -20,6 +20,13 @@ ffmpeg
 
 https://trac.ffmpeg.org/wiki/Encode/H.264
 
+# Installation
+
+https://www.renevolution.com/ffmpeg/2013/03/16/how-to-install-ffmpeg-on-mac-os-x.html
+```
+$ brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools
+```
+
 # Conversion
 
 ## from mp3 to mp4 using a fixed image

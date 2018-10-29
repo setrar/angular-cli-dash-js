@@ -87,6 +87,16 @@ on Mac: (install Osmo4)
 
 /Applications/Osmo4.app/Contents/MacOS/
 
+# Testing
+
+* Run python server
+
+```
+$ python -m SimpleHTTPServer 8000
+```
+
+* create html file
+
 Player.html
 ```html
 <html>

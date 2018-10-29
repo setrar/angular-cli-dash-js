@@ -91,8 +91,33 @@ on Mac: (install Osmo4)
 
 * Run python server
 
+https://stackoverflow.com/questions/21956683/enable-access-control-on-simple-http-server
+
+```Python
+#!/usr/bin/env python
+try:
+    # Python 3
+    from http.server import HTTPServer, SimpleHTTPRequestHandler, test as test_orig
+    import sys
+    def test (*args):
+        test_orig(*args, port=int(sys.argv[1]) if len(sys.argv) > 1 else 8000)
+except ImportError: # Python 2
+    from BaseHTTPServer import HTTPServer, test
+    from SimpleHTTPServer import SimpleHTTPRequestHandler
+
+class CORSRequestHandler (SimpleHTTPRequestHandler):
+    def end_headers (self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        SimpleHTTPRequestHandler.end_headers(self)
+
+if __name__ == '__main__':
+    test(CORSRequestHandler, HTTPServer)
 ```
-$ python -m SimpleHTTPServer 8000
+
+run server under CORS
+
+```
+$ python PythonServer.py 
 ```
 
 * create html file
@@ -111,7 +136,7 @@ Player.html
 <head>
 <body>
    <div>
-       <video data-dashjs-player autoplay src="http://localhost:8000/stream/WhatIsThisThingCalledLove.mpd" controls></video>
+       <video data-dashjs-player autoplay src="http://localhost:8000/stream/WhatIsThisThingCalledLove/.mpd" controls></video>
    </div>
 </body>
 </html>
